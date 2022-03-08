@@ -1,0 +1,108 @@
+*{
+    padding: 1px;
+    margin:0;
+   /* background-color: #ee6055; */
+    font-family: 'Fredoka', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+body{
+    background-color: #ee6055;
+}
+
+/* wrapper controls the grid layout, rows, columns, spacing and  others exciting stuff*/
+
+.wrapper{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 1.5fr 1.2fr 0.8fr;
+    grid-template-areas: 
+    "nav nav nav nav"
+    "sidebar main main main"
+    "sidebar num1 num2 num3"
+    "sidebar footer footer footer";
+    grid-gap: 0.2em;
+}
+
+/* section below are individual sections of the page -- specify their area on the grid
+and other defining attributes*/
+
+nav{
+    background-color: #60d394;
+    grid-area: nav;
+}
+
+main{
+    background-color: #aaf683;
+    grid-area: main;
+}
+
+#sidebar{
+    background-color: #60d394;
+    grid-area: sidebar;
+}
+
+#num1{
+    background-color: #aaf683;
+    grid-area: num1;
+}
+
+#num2{
+    background-color: #aaf683;
+    grid-area:num2
+}
+
+#num3{
+    background-color: #aaf683;
+    grid-area: num3;
+}
+
+#footer{
+    background-color: #60d394;
+    grid-area: footer;
+}
+
+/* parts that make the website responsive (user feedback and interactive stuffs */
+
+/* code below makes site suitable for mobile devices by making content maximum of 
+1 columns wide. */
+
+@media only screen and (max-width:500px){ /*could change, apparently avg mobile site width (320px).*/
+    .wrapper{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr;
+        grid-template-areas: 
+        "nav"
+        "sidebar"
+        "main"
+        "num1"
+        "num2"
+        "num3"
+        "footer";
+    }
+}
+
+/* code for navigation bits below (the fancy pantsy stuff) */ 
+
+ul{
+    text-align: center;
+}
+
+li{
+    
+    padding: 15px;
+}
+
+a{
+    color: black;
+    
+}
+
+a:hover{
+    color: blanchedalmond;
+    transition: 0.25s;
+    font-size: large;
+}
+
