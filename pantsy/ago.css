@@ -37,6 +37,7 @@ nav{
 main{
     background-color: #aaf683;
     grid-area: main;
+    padding: 0.4em;
 }
 
 #sidebar{
@@ -70,18 +71,19 @@ main{
 1 columns wide. */
 
 @media only screen and (max-width:500px){ /*could change, apparently avg mobile site width (320px).*/
-    .wrapper{
-        grid-template-columns: 1fr;
-        grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr;
-        grid-template-areas: 
-        "nav"
-        "sidebar"
-        "main"
-        "num1"
-        "num2"
-        "num3"
-        "footer";
-    }
+  .wrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.4fr 0.4fr 2.2fr 1.2fr 1.2fr 1.2fr;
+    grid-template-areas: 
+    "nav"
+    "sideMenu"
+    "main"
+    "num1"
+    "num2"
+    "num3"
+    "footer";
+  }
+  
 }
 
 /* code for navigation bits below (the fancy pantsy stuff) */ 
@@ -106,9 +108,9 @@ a:hover{
     font-size: large;
 }
 
-/*
+/* */
 
-#menuToggle
+#sideMenu 
 {
   position: relative;
   top: 50px;
@@ -117,7 +119,7 @@ a:hover{
   z-index: 1;
 }
 
-#menuToggle a
+#sideMenu a
 {
   text-decoration: none;
   color: #232323;
@@ -125,12 +127,12 @@ a:hover{
   transition: color 0.3s ease;
 }
 
-#menuToggle a:hover
+#sideMenu a:hover
 {
   color: tomato;
 }
 
-#menuToggle input
+#sideMenu input
 {
   display: block;
   width: 40px;
@@ -147,7 +149,7 @@ a:hover{
   -webkit-touch-callout: none;
 }
 
-#menuToggle span
+#sideMenu span
 {
   display: block;
   width: 33px;
@@ -167,29 +169,29 @@ a:hover{
               opacity 0.55s ease;
 }
 
-#menuToggle span:first-child
+#sideMenu span:first-child
 {
   transform-origin: 0% 0%;
 }
 
-#menuToggle span:nth-last-child(2)
+#sideMenu span:nth-last-child(2)
 {
   transform-origin: 0% 100%;
 }
 
-#menuToggle input:checked ~ span
+#sideMenu input:checked ~ span
 {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
 
-#menuToggle input:checked ~ span:nth-last-child(3)
+#sideMenu input:checked ~ span:nth-last-child(3)
 {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-#menuToggle input:checked ~ span:nth-last-child(2)
+#sideMenu  input:checked ~ span:nth-last-child(2)
 {
   transform: rotate(-45deg) translate(0, -1px);
 }
@@ -214,12 +216,12 @@ a:hover{
   font-size: 22px;
 }
 
-#menuToggle input:checked ~ ul
+#sideMenu input:checked ~ ul
 {
   transform: none;
 }
 
- above is hamburger code which can be used at a later date, html tags <span> required..*/
+ /*above is hamburger code which can be used at a later date, html tags <span> required..*/
 
 
 
